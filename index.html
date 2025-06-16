@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İnsan Performans Teknolojileri Final Sınavı</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>İnsan Performans Teknolojileri Final Sınavı</h1>
+            <div class="quiz-info">
+                <span id="current-question">1</span> / <span id="total-questions">90</span>
+            </div>
+            <div class="timer" id="timer">60:00</div>
+        </header>
+
+        <main>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+
+            <div class="question-container" id="question-container">
+                <div class="question-number">Soru <span id="question-num">1</span></div>
+                <div class="question-text" id="question-text"></div>
+                <div class="options" id="options"></div>
+            </div>
+
+            <div class="navigation">
+                <button id="prev-btn" class="nav-btn" disabled>← Önceki</button>
+                <button id="next-btn" class="nav-btn">Sonraki →</button>
+                <button id="finish-btn" class="finish-btn" style="display: none;">Sınavı Bitir</button>
+            </div>
+        </main>
+
+        <div class="results" id="results" style="display: none;">
+            <h2>Sınav Sonuçları</h2>
+            <div class="score-summary">
+                <div class="total-score">
+                    <h3>Toplam Puan: <span id="total-score"></span>/90</h3>
+                    <div class="percentage" id="percentage"></div>
+                </div>
+                <div class="section-scores">
+                    <div class="section-score">
+                        <h4>Organizasyonel Analiz</h4>
+                        <span id="org-score"></span>/30
+                    </div>
+                    <div class="section-score">
+                        <h4>Çevresel Analiz</h4>
+                        <span id="env-score"></span>/30
+                    </div>
+                    <div class="section-score">
+                        <h4>Boşluk Analizi</h4>
+                        <span id="gap-score"></span>/30
+                    </div>
+                </div>
+            </div>
+            <button id="restart-btn" class="restart-btn">Tekrar Dene</button>
+            <button id="review-btn" class="review-btn">Cevapları İncele</button>
+        </div>
+
+        <div class="review-section" id="review-section" style="display: none;">
+            <h2>Cevap Anahtarı</h2>
+            <div id="review-content"></div>
+            <button id="back-to-results" class="nav-btn">Sonuçlara Dön</button>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
